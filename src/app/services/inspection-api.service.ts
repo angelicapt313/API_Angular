@@ -7,10 +7,11 @@ import { Observable } from 'rxjs';
 })
 export class InspectionAPIService {
 
-  readonly inspectionAPIUrl="https://localhost:7112/api";
+  readonly inspectionAPIUrl="https://localhost:7112/swagger/index.html";
 
   constructor(private http:HttpClient) { }
 
+  //
   getInspectionList():Observable<any[]>
   {
     return this.http.get<any>(this.inspectionAPIUrl + '/inspections');
@@ -30,7 +31,6 @@ export class InspectionAPIService {
   {
     return this.http.delete(this.inspectionAPIUrl + `/inspections${id}`)
   }
-
 
   //Inspection Types
   getInspectionListTypes():Observable<any[]>
