@@ -26,10 +26,11 @@
               "src/styles.css",
               "C:/Users/Angelica/Documents/Angular/Septiembre/inspectionAPI/node_modules/bootstrap/dist/css/bootstrap.min.css"
             ],
-            "scripts": [
-              "C:/Users/Angelica/Documents/Angular/Septiembre/inspectionAPI/node_modules/bootstrap/dist/js/bootstrap.min.js",
+            "scripts": 
+            [ 
               "C:/Users/Angelica/Documents/Angular/Septiembre/inspectionAPI/node_modules/jquery/dist/jquery.min.js",
-              "C:/Users/Angelica/Documents/Angular/Septiembre/inspectionAPI/node_modules/@popperjs/core/dist/umd/popper.min.js"
+              "C:/Users/Angelica/Documents/Angular/Septiembre/inspectionAPI/node_modules/@popperjs/core/dist/umd/popper.min.js",
+              "C:/Users/Angelica/Documents/Angular/Septiembre/inspectionAPI/node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {

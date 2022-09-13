@@ -1,0 +1,46 @@
+<div class="container-fluid">
+
+     <!-- Button trigger modal -->
+<button type="button" class="btn btn-danger float-end" data-toggle="modal" data-target="#exampleModal">
+    Show Inspection Types
+  </button>
+
+    <table class="table table-stripped">
+        <thead>
+            <th>Id</th>
+            <th>Inspection Type</th>
+            <th>Status</th>
+            <th>Comments</th>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let item of inspectionList$|async">
+                <td>{{item.id}}</td>
+                <td>{{item.inspectionTypeId}}</td>
+                <td>{{item.status}}</td>
+                <td>{{item.comments}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+
+   
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Inspection Types</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p *ngFor="let type of inspectionTypesList$|async">
+            {{type.id}} - {{type.inspectionname}} </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

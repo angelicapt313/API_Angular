@@ -13,19 +13,19 @@ export class InspectionAPIService {
 
   //
   getInspectionList(): Observable<any[]> {
-    return this.http.get<any>(this.inspectionAPIUrl + '/inspections');
+    return this.http.get<any>(this.inspectionAPIUrl + '/Inspections');
   }
 
   addInspection(data: any) {
-    return this.http.post(this.inspectionAPIUrl + '/inspections', data);
+    return this.http.post(this.inspectionAPIUrl + '/Inspections', data);
   }
 
   updateInspection(id: number | string, data: any) {
-    return this.http.put(this.inspectionAPIUrl + `/inspections/${id}`, data);
+    return this.http.put(this.inspectionAPIUrl + `/Inspections/${id}`, data);
   }
 
   deleteInspection(id: number | string) {
-    return this.http.delete(this.inspectionAPIUrl + `/inspections/${id}`);
+    return this.http.delete(this.inspectionAPIUrl + `/Inspections/${id}`);
   }
 
   //Inspection Types
@@ -50,15 +50,15 @@ export class InspectionAPIService {
     return this.http.get<any>(this.inspectionAPIUrl + '/Status');
   }
 
-  addStatus(data: any) {
+  addStatus(data:any) {
     return this.http.post(this.inspectionAPIUrl + '/Status', data);
   }
 
-  updateStatus(id: number | string, data: any) {
+  updateStatus(id:number|string, data: any) {
     return this.http.put(this.inspectionAPIUrl + `/Status/${id}`, data);
   }
 
-  deleteStatus(id: number | string) {
+  deleteStatus(id:number|string) {
     return this.http.delete(this.inspectionAPIUrl + `/Status/${id}`)
   }
 }

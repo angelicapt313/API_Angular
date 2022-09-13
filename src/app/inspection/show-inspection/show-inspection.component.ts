@@ -22,9 +22,10 @@ export class ShowInspectionComponent implements OnInit {
   constructor(private srv:InspectionAPIService) { }
 
   
-
-
-  ngOnInit(): void {
+  ngOnInit(): void 
+  {
+    this.inspectionList$ = this.srv.getInspectionList();
+    this.inspectionTypesList$ = this.srv.getInspectionTypeList();
   }
 
 }
