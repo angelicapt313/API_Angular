@@ -6,11 +6,13 @@ import { AddEditInspectionComponent } from './components/add-edit-inspection/add
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InspectionAPIService } from './services/inspection-api.service';
+import { ShowInspectionComponent } from './components/show-inspection/show-inspection.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddEditInspectionComponent
+    AddEditInspectionComponent,
+    ShowInspectionComponent
   ],
   imports: [
     BrowserModule,
