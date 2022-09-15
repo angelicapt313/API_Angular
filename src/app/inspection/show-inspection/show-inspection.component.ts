@@ -11,6 +11,10 @@ import { Observable } from 'rxjs';
 export class ShowInspectionComponent implements OnInit {
 
 
+  modalTitle:string="";
+  activateAddEditInspectionComponent:boolean=false;
+  inspection:any;
+
   //signo de exclamación para una asignación definitiva: <any[]>=string
   inspectionList$!:Observable<any[]>;
   inspectionTypesList$!:Observable<any[]>;
@@ -38,6 +42,18 @@ export class ShowInspectionComponent implements OnInit {
         this.inspectionTypesMap.set(this.inspectionTypesList[i].id, this.inspectionTypesList[i].inspectionName);
       }
     })
+  }
+
+  modalAdd()
+  {
+    this.inspection = {
+      id:0,
+      status:null,
+      comments:null,
+      inspectionTypeId:null
+    }
+    this.modalTitle ="Add Inspection";
+    this.activateAddEditInspectionComponent=true;
   }
 
 }
