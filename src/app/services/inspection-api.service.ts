@@ -29,7 +29,7 @@ export class InspectionAPIService {
   }
 
   //Inspection Types
-  getInspectionTypeList(): Observable<any[]> {
+  getInspectionTypesList(): Observable<any[]> {
     return this.http.get<any>(this.inspectionAPIUrl + '/InspectionTypes');
   }
 

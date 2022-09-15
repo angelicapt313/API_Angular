@@ -8,6 +8,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { InspectionAPIService } from './services/inspection-api.service';
 import { ShowInspectionComponent } from './inspection/show-inspection/show-inspection.component';
 import { InspectionComponent } from './inspection/inspection.component';
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { InspectionComponent } from './inspection/inspection.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    NgbModule
   ],
   providers: [InspectionAPIService],
   bootstrap: [AppComponent]

@@ -10,6 +10,7 @@ import { Observable } from 'rxjs';
 })
 export class ShowInspectionComponent implements OnInit {
 
+
   //signo de exclamación para una asignación definitiva: <any[]>=string
   inspectionList$!:Observable<any[]>;
   inspectionTypesList$!:Observable<any[]>;
@@ -21,11 +22,22 @@ export class ShowInspectionComponent implements OnInit {
   //Inyectar servicio
   constructor(private srv:InspectionAPIService) { }
 
-  
   ngOnInit(): void 
   {
+   
     this.inspectionList$ = this.srv.getInspectionList();
-    this.inspectionTypesList$ = this.srv.getInspectionTypeList();
+    this.inspectionTypesList$ = this.srv.getInspectionTypesList();
+    this.refreshInspectionTypesMap();
+  }
+
+  refreshInspectionTypesMap()
+  {
+    this.srv.getInspectionList().subscribe(data => {
+      for(let i=0; i<data.length; i++)
+      {
+        this.inspectionTypesMap.set(this.inspectionTypesList[i].id, this.inspectionTypesList[i].inspectionName);
+      }
+    })
   }
 
 }
