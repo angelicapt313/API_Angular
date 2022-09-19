@@ -56,4 +56,10 @@ export class ShowInspectionComponent implements OnInit {
     this.activateAddEditInspectionComponent=true;
   }
 
+  modalClose()
+  {
+    this.activateAddEditInspectionComponent=false;
+    this.inspectionList$=this.srv.getInspectionList();
+  }
+
 }

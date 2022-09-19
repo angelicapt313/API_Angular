@@ -46,6 +46,17 @@ export class AddEditInspectionComponent implements OnInit {
       if (closeModalBtn) {
         closeModalBtn.click();
       }
+
+      var showAddSuccess = document.getElementById("add-success-alert")
+      if(showAddSuccess)
+      {
+        showAddSuccess.style.display = "block";
+      }
+      setTimeout(function(){
+        if(showAddSuccess){
+          showAddSuccess.style.display="none";
+        }
+      }, 4000);
     })
   }
 
